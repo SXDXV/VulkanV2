@@ -13,7 +13,7 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Shaders">
+    <Filter Include="shaders">
       <UniqueIdentifier>{e9228292-c3ec-453d-9e80-57aa91f99aab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -32,13 +32,19 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="shader.vert">
-      <Filter>Shaders</Filter>
+      <Filter>shaders</Filter>
     </None>
     <None Include="shader.frag">
-      <Filter>Shaders</Filter>
+      <Filter>shaders</Filter>
     </None>
     <None Include="compile.bat">
       <Filter>Source Files</Filter>
+    </None>
+    <None Include="frag.spv">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="vert.spv">
+      <Filter>shaders</Filter>
     </None>
   </ItemGroup>
 </Project>
