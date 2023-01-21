@@ -14,7 +14,7 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
     <Filter Include="shaders">
-      <UniqueIdentifier>{e9228292-c3ec-453d-9e80-57aa91f99aab}</UniqueIdentifier>
+      <UniqueIdentifier>{ebd08040-5b44-449a-a902-17d4771443d4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -38,7 +38,7 @@
       <Filter>shaders</Filter>
     </None>
     <None Include="compile.bat">
-      <Filter>Source Files</Filter>
+      <Filter>shaders</Filter>
     </None>
     <None Include="frag.spv">
       <Filter>shaders</Filter>
