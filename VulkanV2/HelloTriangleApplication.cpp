@@ -1352,6 +1352,7 @@ private:
     //    memcpy(uniformBuffersMapped[currentImage], &ubo, sizeof(ubo));
     //}
 
+    // GOAT
     void updateUniformBuffer(uint32_t currentImage) {
         static auto startTime = std::chrono::high_resolution_clock::now();
 
@@ -1359,13 +1360,28 @@ private:
         float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
 
         UniformBufferObject ubo{};
-        ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.05f, 0.1f));
+        ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 0.1f));
         ubo.view = glm::lookAt(glm::vec3(20.0f, 280.0f, -2.0f), glm::vec3(-20.0f, 40.0f, 0.0f), glm::vec3(0.0f, 0.0f, 1.0f));
         ubo.proj = glm::perspective(glm::radians(60.0f), swapChainExtent.width / (float)swapChainExtent.height, 0.1f, 1000.0f);
         ubo.proj[1][1] *= -1;
 
         memcpy(uniformBuffersMapped[currentImage], &ubo, sizeof(ubo));
     }
+
+    //void updateUniformBuffer(uint32_t currentImage) {
+    //    static auto startTime = std::chrono::high_resolution_clock::now();
+
+    //    auto currentTime = std::chrono::high_resolution_clock::now();
+    //    float time = std::chrono::duration<float, std::chrono::seconds::period>(currentTime - startTime).count();
+
+    //    UniformBufferObject ubo{};
+    //    ubo.model = glm::rotate(glm::mat4(1.0f), time * glm::radians(90.0f), glm::vec3(0.0f, 0.0f, 0.1f));
+    //    ubo.view = glm::lookAt(glm::vec3(50.0f, 100.0f, -2.0f), glm::vec3(-400.0f, -1200.0f, 300.0f), glm::vec3(0.0f, 0.0f, 1.0f));
+    //    ubo.proj = glm::perspective(glm::radians(60.0f), swapChainExtent.width / (float)swapChainExtent.height, 0.1f, 1000.0f);
+    //    ubo.proj[1][1] *= -1;
+
+    //    memcpy(uniformBuffersMapped[currentImage], &ubo, sizeof(ubo));
+    //}
 
     void drawFrame() {
         vkWaitForFences(device, 1, &inFlightFences[currentFrame], VK_TRUE, UINT64_MAX);
